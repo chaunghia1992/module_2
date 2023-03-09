@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3eec3d45-9919-4f25-8b78-3c47aa97504f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/GPT/GPTjava.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/dayofmon/dayofmonth.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/main1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/main1.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +63,7 @@
       <recent name="com.codegym" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.dayofmonth">
     <configuration name="GPTjava" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.codegym.GPT.GPTjava" />
       <module name="module2.1" />
@@ -78,8 +77,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="dayofmonth" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.codegym.dayofmon.dayofmonth" />
+      <module name="module2.1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.codegym.dayofmon.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.dayofmonth" />
         <item itemvalue="Application.GPTjava" />
       </list>
     </recent_temporary>
@@ -94,7 +107,7 @@
       <updated>1678267439120</updated>
       <workItem from="1678267439344" duration="6623000" />
       <workItem from="1678328066572" duration="3203000" />
-      <workItem from="1678331372528" duration="4434000" />
+      <workItem from="1678331372528" duration="9865000" />
     </task>
     <servers />
   </component>
