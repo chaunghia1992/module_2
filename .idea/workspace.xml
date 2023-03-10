@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3eec3d45-9919-4f25-8b78-3c47aa97504f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/leapyear/leapyear1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/SNT/KTSNT.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,13 +63,26 @@
       <recent name="com.codegym" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.leapyear1">
+  <component name="RunManager" selected="Application.KTSNT">
     <configuration name="GPTjava" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.codegym.GPT.GPTjava" />
       <module name="module2.1" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.codegym.GPT.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="KTSNT" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.codegym.SNT.KTSNT" />
+      <module name="module2.1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.codegym.SNT.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -105,6 +118,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.KTSNT" />
         <item itemvalue="Application.leapyear1" />
         <item itemvalue="Application.dayofmonth" />
         <item itemvalue="Application.GPTjava" />
@@ -121,7 +135,7 @@
       <updated>1678267439120</updated>
       <workItem from="1678267439344" duration="6623000" />
       <workItem from="1678328066572" duration="3203000" />
-      <workItem from="1678331372528" duration="11672000" />
+      <workItem from="1678331372528" duration="15065000" />
     </task>
     <servers />
   </component>
