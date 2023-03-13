@@ -9,12 +9,12 @@ public class bt1 {
 
     public static void main(String[] args) {
 //
-//        int sum = 0;
-//        for (int num : numbers) {
-//            sum = num + sum;
-//
-//        }
-//        System.out.println("Tổng kết quả của mảng " + sum);
+        int sum = 0;
+        for (int num : numbers) {
+            sum = num + sum;
+
+        }
+        System.out.println("Tổng kết quả của mảng " + sum);
 
         //Bt2
 
@@ -40,4 +40,4 @@ public class bt1 {
            // System.out.println(numbers);
         }
     }
-}
+
