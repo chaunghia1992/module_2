@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3eec3d45-9919-4f25-8b78-3c47aa97504f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/bodyweight/bodyweight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/bodyweight/bodyweight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/demobaimoi.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/demobaimoi.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,15 +58,30 @@
     &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.codegym.bodyweight" />
       <recent name="com.codegym" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.bodyweight">
+  <component name="RunManager" selected="Application.bt1">
+    <configuration name="CurrencyConverter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.codegym.currency.CurrencyConverter" />
+      <module name="module2.1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.codegym.currency.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GPTjava" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.codegym.GPT.GPTjava" />
       <module name="module2.1" />
@@ -80,12 +95,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="KTSNT" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.codegym.SNT.KTSNT" />
+    <configuration name="bt1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.codegym.baitap1.bt1" />
       <module name="module2.1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.codegym.SNT.*" />
+          <option name="PATTERN" value="com.codegym.baitap1.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -93,38 +108,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Showtypes1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.codegym.Showtypes.Showtypes1" />
+    <configuration name="currency" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.codegym.currency.currency" />
       <module name="module2.1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.codegym.Showtypes.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Showtypes2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.codegym.Showtypes.Showtypes2" />
-      <module name="module2.1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.codegym.Showtypes.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="bodyweight" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.codegym.bodyweight.bodyweight" />
-      <module name="module2.1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.codegym.bodyweight.*" />
+          <option name="PATTERN" value="com.codegym.currency.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -145,12 +134,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="leapyear1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.codegym.leapyear.leapyear1" />
+    <configuration name="interestloan" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.codegym.interestloan.interestloan" />
       <module name="module2.1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.codegym.leapyear.*" />
+          <option name="PATTERN" value="com.codegym.interestloan.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="showgreetings" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.codegym.showgreetings.showgreetings" />
+      <module name="module2.1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.codegym.showgreetings.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -160,11 +162,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.bodyweight" />
-        <item itemvalue="Application.Showtypes2" />
-        <item itemvalue="Application.Showtypes1" />
-        <item itemvalue="Application.KTSNT" />
-        <item itemvalue="Application.leapyear1" />
+        <item itemvalue="Application.bt1" />
+        <item itemvalue="Application.interestloan" />
+        <item itemvalue="Application.currency" />
+        <item itemvalue="Application.CurrencyConverter" />
+        <item itemvalue="Application.showgreetings" />
       </list>
     </recent_temporary>
   </component>
@@ -178,11 +180,19 @@
       <updated>1678267439120</updated>
       <workItem from="1678267439344" duration="6623000" />
       <workItem from="1678328066572" duration="3203000" />
-      <workItem from="1678331372528" duration="24892000" />
+      <workItem from="1678331372528" duration="40362000" />
+      <workItem from="1678697814184" duration="4609000" />
     </task>
     <servers />
   </component>
+  <component name="TerminalProjectNonSharedOptionsProvider">
+    <option name="startingDirectory" value="D:\module2\module2.1\src\main\java\com\codegym\bodyweight" />
+  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
