@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3eec3d45-9919-4f25-8b78-3c47aa97504f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/demobaimoi.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/demobaimoi.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,17 +63,18 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.codegym.rectangle" />
       <recent name="com.codegym.bodyweight" />
       <recent name="com.codegym" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.bt1">
-    <configuration name="CurrencyConverter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.codegym.currency.CurrencyConverter" />
+  <component name="RunManager" selected="Application.rectangle">
+    <configuration name="GPTjava" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.codegym.GPT.GPTjava" />
       <module name="module2.1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.codegym.currency.*" />
+          <option name="PATTERN" value="com.codegym.GPT.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -82,12 +82,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GPTjava" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.codegym.GPT.GPTjava" />
+    <configuration name="Rectangle" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.codegym.rectangle.Rectangle" />
       <module name="module2.1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.codegym.GPT.*" />
+          <option name="PATTERN" value="com.codegym.rectangle.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -108,12 +108,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="currency" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.codegym.currency.currency" />
+    <configuration name="daonguoc" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.codegym.daonguoc.daonguoc" />
       <module name="module2.1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.codegym.currency.*" />
+          <option name="PATTERN" value="com.codegym.daonguoc.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -147,12 +147,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="showgreetings" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.codegym.showgreetings.showgreetings" />
+    <configuration name="rectangle" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.codegym.rectangle.rectangle" />
       <module name="module2.1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.codegym.showgreetings.*" />
+          <option name="PATTERN" value="com.codegym.rectangle.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -162,11 +162,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.rectangle" />
+        <item itemvalue="Application.Rectangle" />
+        <item itemvalue="Application.daonguoc" />
         <item itemvalue="Application.bt1" />
         <item itemvalue="Application.interestloan" />
-        <item itemvalue="Application.currency" />
-        <item itemvalue="Application.CurrencyConverter" />
-        <item itemvalue="Application.showgreetings" />
       </list>
     </recent_temporary>
   </component>
@@ -182,6 +182,8 @@
       <workItem from="1678328066572" duration="3203000" />
       <workItem from="1678331372528" duration="40362000" />
       <workItem from="1678697814184" duration="4609000" />
+      <workItem from="1678777547486" duration="3515000" />
+      <workItem from="1678842550269" duration="12615000" />
     </task>
     <servers />
   </component>
