@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3eec3d45-9919-4f25-8b78-3c47aa97504f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/point2D/point2d.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/point2D/point3d.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,6 +23,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/codegym/FirstTwentyPrimes/FirstTwentyPrimes1.java" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -68,7 +73,20 @@
       <recent name="com.codegym" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.rectangle">
+  <component name="RunManager" selected="Application.menu1">
+    <configuration name="FirstTwentyPrimes1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.codegym.FirstTwentyPrimes.FirstTwentyPrimes1" />
+      <module name="module2.1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.codegym.FirstTwentyPrimes.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GPTjava" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.codegym.GPT.GPTjava" />
       <module name="module2.1" />
@@ -95,32 +113,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="bt1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.codegym.baitap1.bt1" />
-      <module name="module2.1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.codegym.baitap1.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="daonguoc" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.codegym.daonguoc.daonguoc" />
-      <module name="module2.1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.codegym.daonguoc.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="dayofmonth" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.codegym.dayofmon.dayofmonth" />
       <module name="module2.1" />
@@ -134,12 +126,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="interestloan" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.codegym.interestloan.interestloan" />
+    <configuration name="findwishes1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.codegym.findwishes.findwishes1" />
       <module name="module2.1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.codegym.interestloan.*" />
+          <option name="PATTERN" value="com.codegym.findwishes.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="menu1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.codegym.menu.menu1" />
+      <module name="module2.1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.codegym.menu.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -162,11 +167,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.menu1" />
+        <item itemvalue="Application.FirstTwentyPrimes1" />
+        <item itemvalue="Application.findwishes1" />
         <item itemvalue="Application.rectangle" />
         <item itemvalue="Application.Rectangle" />
-        <item itemvalue="Application.daonguoc" />
-        <item itemvalue="Application.bt1" />
-        <item itemvalue="Application.interestloan" />
       </list>
     </recent_temporary>
   </component>
@@ -184,6 +189,10 @@
       <workItem from="1678697814184" duration="4609000" />
       <workItem from="1678777547486" duration="3515000" />
       <workItem from="1678842550269" duration="12615000" />
+      <workItem from="1678931120082" duration="3283000" />
+      <workItem from="1679017422845" duration="5088000" />
+      <workItem from="1679034815668" duration="4665000" />
+      <workItem from="1679195192927" duration="2668000" />
     </task>
     <servers />
   </component>
