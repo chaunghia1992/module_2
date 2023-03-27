@@ -1,0 +1,54 @@
+**********************
+
+1.Stack là một cấu trúc dữ liệu trừu tượng trong đó các phần tử được chèn và xóa theo cơ chế LIFO 
+(Last-In-First-Out) tức là phần tử cuối cùng được chèn vào sẽ được lấy ra đầu tiên. 
+Stack cũng có thể được hiểu như một ngăn xếp của các đối tượng.
+
+Queue là một cấu trúc dữ liệu trừu tượng khác trong đó các phần tử được chèn và xóa theo cơ chế 
+FIFO (First-In-First-Out) tức là phần tử đầu tiên được chèn vào sẽ được lấy ra đầu tiên. 
+Queue cũng có thể được hiểu như một hàng đợi của các đối tượng.
+
+-- ví dụ :
+
+--import java.util.Stack;
+
+public class MyStack {
+  public static void main(String[] args) {
+    Stack<String> stack = new Stack<>();
+    
+    // Thêm phần tử vào stack
+    stack.push("A");
+    stack.push("B");
+    stack.push("C");
+    
+    // Lấy phần tử ra khỏi stack
+    while(!stack.isEmpty()) {
+      System.out.print(stack.pop() + " ");
+    }
+  }
+*****************************************************
+
+2..Queue trong Java:
+
+Có thể triển khai Queue bằng hai cách: sử dụng Queue interface của Java hoặc sử dụng LinkedList class của Java.
+
+ví dụ :
+
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class MyQueue {
+  public static void main(String[] args) {
+    Queue<String> queue = new LinkedList<>();
+    
+    // Thêm phần tử vào queue
+    queue.add("A");
+    queue.add("B");
+    queue.add("C");
+    
+    // Lấy phần tử ra khỏi queue
+    while(!queue.isEmpty()) {
+      System.out.print(queue.poll() + " ");
+    }
+  }
+****************************************************
