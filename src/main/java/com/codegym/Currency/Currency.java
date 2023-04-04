@@ -1,8 +1,8 @@
-package com.codegym.currency;
+package com.codegym.Currency;
 
 import java.util.Scanner;
 
-public class currency {
+public class Currency {
     public static void main(String[] args) {
         // Step 2
         float rate = 23000;

@@ -1,4 +1,4 @@
-package com.codegym.accessmodifier;
+package com.codegym.AccessModifier;
 
 public class TestCircle {
     public static void main(String[] args){

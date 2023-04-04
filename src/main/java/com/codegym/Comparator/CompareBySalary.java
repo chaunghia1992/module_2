@@ -1,4 +1,4 @@
-package  com.codegym.comparator;
+package  com.codegym.Comparator;
 
 import java.util.Comparator;
 

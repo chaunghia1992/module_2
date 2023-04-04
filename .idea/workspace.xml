@@ -6,14 +6,40 @@
   <component name="ChangeListManager">
     <list default="true" id="3eec3d45-9919-4f25-8b78-3c47aa97504f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/MyLinkedList/MyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/MyLinkedList/MyLinkedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/StaticMethod/StaticMethodTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/StaticMethod/StaticMethodTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/StaticProperty/TestStaticpropety.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/StaticProperty/TestStaticpropety.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/StaticProperty/car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/StaticProperty/car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/comparator/CompareByAge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/comparator/CompareByAge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/comparator/CompareBySalary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/comparator/CompareBySalary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/comparator/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/comparator/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/comparator/comparator_comparable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/comparator/comparator_comparable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/AccessModifier/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/AccessModifier/Circle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/AccessModifier/TestCircle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/AccessModifier/TestCircle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/ArrayMax/ArrayMax.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/ArrayMax/ArrayMax.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/ArrayMin/ArrayMin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/ArrayMin/ArrayMin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/BodyWeight/BodyWeight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/BodyWeight/BodyWeight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/Client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/Client/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/Client/ClientStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/Client/ClientStore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/Client/ComparatorById.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/Client/ComparatorById.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/Client/ComparatorByName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/Client/ComparatorByName.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/Client/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/Client/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/Comparator/CompareByAge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/Comparator/CompareByAge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/Comparator/CompareBySalary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/Comparator/CompareBySalary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/Comparator/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/Comparator/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/Comparator/comparator_Comparable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/Comparator/comparator_Comparable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/Currency/Currency.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/Currency/Currency.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/EmployeeManager/DehaCompany.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/EmployeeManager/DehaCompany.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/EmployeeManager/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/EmployeeManager/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/EmployeeManager/EmployeeType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/EmployeeManager/EmployeeType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/EmployeeManager/Experience.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/EmployeeManager/Experience.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/EmployeeManager/Fresher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/EmployeeManager/Fresher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/EmployeeManager/Intern.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/EmployeeManager/Intern.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/EmployeeManager/certificate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/EmployeeManager/certificate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/FindWishes/FindWishes1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/FindWishes/FindWishes1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/InterestLoan/InterestLoan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/InterestLoan/InterestLoan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/LeapYear/LeapYear1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/LeapYear/LeapYear1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/Look100/Look2100.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/Look100/Look2100.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/Menu/Menu1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/Menu/Menu1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/Quadratic/Quadratic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/Quadratic/Quadratic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/Rectangle/rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/Rectangle/rectangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/Reverse/Reverse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/Reverse/Reverse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/StopWach/StopWatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/StopWach/StopWatch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/Student/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/Student/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/Student/TestStudent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/Student/TestStudent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/Test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +49,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="package-info" />
         <option value="Class" />
       </list>
     </option>
@@ -74,8 +101,13 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.codegym.AbstractAndInterfacetests" />
+      <recent name="com.codegym.book" />
       <recent name="com.codegym.accessmodifier" />
       <recent name="com.codegym.comparator" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="com.codegym.Shape" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.codegym.rectangle" />
@@ -83,13 +115,26 @@
       <recent name="com.codegym" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TestMyLinkedList">
-    <configuration name="Circle" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.codegym.accessmodifier.Circle" />
+  <component name="RunManager" selected="Application.SquareTest">
+    <configuration name="CircleTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.codegym.Shape.CircleTest" />
       <module name="module2.1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.codegym.accessmodifier.*" />
+          <option name="PATTERN" value="com.codegym.Shape.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FindArray$findArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.codegym.FindArray.FindArray$findArray" />
+      <module name="module2.1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.codegym.FindArray.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -110,12 +155,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Quadratic" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.codegym.quadratic.Quadratic" />
+    <configuration name="RectangleTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.codegym.Shape.RectangleTest" />
       <module name="module2.1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.codegym.quadratic.*" />
+          <option name="PATTERN" value="com.codegym.Shape.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -123,12 +168,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestMyLinkedList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.codegym.MyLinkedList.TestMyLinkedList" />
+    <configuration name="ShapeTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.codegym.Shape.ShapeTest" />
       <module name="module2.1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.codegym.MyLinkedList.*" />
+          <option name="PATTERN" value="com.codegym.Shape.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -136,25 +181,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestStaticpropety" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.codegym.StaticProperty.TestStaticpropety" />
+    <configuration name="SquareTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.codegym.Shape.SquareTest" />
       <module name="module2.1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.codegym.StaticProperty.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Teststudent" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.codegym.student.Teststudent" />
-      <module name="module2.1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.codegym.student.*" />
+          <option name="PATTERN" value="com.codegym.Shape.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -177,11 +209,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TestMyLinkedList" />
-        <item itemvalue="Application.Teststudent" />
-        <item itemvalue="Application.Circle" />
-        <item itemvalue="Application.TestStaticpropety" />
-        <item itemvalue="Application.Quadratic" />
+        <item itemvalue="Application.SquareTest" />
+        <item itemvalue="Application.RectangleTest" />
+        <item itemvalue="Application.CircleTest" />
+        <item itemvalue="Application.ShapeTest" />
+        <item itemvalue="Application.FindArray$findArray" />
       </list>
     </recent_temporary>
   </component>
@@ -202,7 +234,7 @@
       <workItem from="1678931120082" duration="3283000" />
       <workItem from="1679017422845" duration="5088000" />
       <workItem from="1679034815668" duration="4665000" />
-      <workItem from="1679195192927" duration="36583000" />
+      <workItem from="1679195192927" duration="92474000" />
     </task>
     <servers />
   </component>

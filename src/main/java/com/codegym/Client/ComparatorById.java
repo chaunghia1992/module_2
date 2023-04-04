@@ -1,11 +1,11 @@
-package com.codegym.client;
+package com.codegym.Client;
 
 import java.util.Comparator;
 
-public class ComparatorById implements Comparator<client> {
+public class ComparatorById implements Comparator<Client> {
 
     @Override
-    public int compare(client o1, client o2) {
+    public int compare(Client o1, Client o2) {
         if (o1.getId() > o2.getId()){
             return 1;
         }else if (o1.getId() == o2.getId()){

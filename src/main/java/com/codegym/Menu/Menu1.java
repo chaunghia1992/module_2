@@ -1,7 +1,7 @@
-package com.codegym.menu;
+package com.codegym.Menu;
 
 import java.util.Scanner;
-public  class menu1 {
+public  class Menu1 {
     public static void main(String[] args){
         int choice = -1;
         Scanner input = new Scanner(System.in);

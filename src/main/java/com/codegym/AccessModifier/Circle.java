@@ -1,4 +1,4 @@
-package com.codegym.accessmodifier;
+package com.codegym.AccessModifier;
 
 public class Circle {
     private double radius;

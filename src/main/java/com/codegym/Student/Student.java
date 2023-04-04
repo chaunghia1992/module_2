@@ -1,9 +1,9 @@
-package com.codegym.student;
+package com.codegym.Student;
 
-public class student {
+public class Student {
     private String name = " john";
     private String classes = "Co2";
-    public student (){}
+    public Student(){}
     public void setName(String name){
         this.name = name ;
     }

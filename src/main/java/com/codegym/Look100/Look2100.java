@@ -1,7 +1,6 @@
-package com.codegym.look100;
+package com.codegym.Look100;
 
-import java.util.Scanner;
-public class look2100 {
+public class Look2100 {
     public static void main(String[] args){
         int point = 0;
         int count = 0;

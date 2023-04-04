@@ -1,9 +1,9 @@
 
-package com.codegym.bodyweight;
+package com.codegym.BodyWeight;
 
 import java.util.Scanner;
 
-public class bodyweight {
+public class BodyWeight {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

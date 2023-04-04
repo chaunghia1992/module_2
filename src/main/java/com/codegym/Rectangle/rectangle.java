@@ -1,4 +1,4 @@
-package com.codegym.rectangle;
+package com.codegym.Rectangle;
 
 import java.util.Scanner;
 

@@ -1,0 +1,289 @@
+*****Làm thế nào để Set/HashSet đảm bảo các phần tử không trùng lặp
+
+như chúng ta đã biết rằng mỗi key trong HashMap là duy nhất,
+ vận dụng tính chất này mỗi phần tử trong HashSet sẽ là một key 
+trong HashMap với một value là một hằng số PRESENT.
+
+public boolean add(E e)
+{
+        return map.put(e, PRESENT)==null;
+
+}
+
+****hashmap#put method trả về phần value của key khi nó đã tồn tại trước đó 
+hoặc trả về null khi nó chưa tồn tại.vì vậy nếu hashMap.put() trả về null
+nghĩa là thêm phần tử thành công.
+
+*Hầu hết mọi hoạt động trên HashSet đều quy về sử dụng các method của HashMap
+để triển khai. 
+
+***Equals()
+Trong java, Object class mặc định là cha của tất cả các class, bên trong nó định nghĩa
+ sẵn 2 method equals() và  hashCode() – đều này có nghĩa rằng tất cả các class 
+đều mặc định sẽ có 2 method này.
+--Mặc định, equals() được triển khai trong Object class sẽ so sánh địa chỉ object thay 
+vì so sánh giá trị các thuộc tính trong object. Hai instance income và expenses là duy nhất 
+và được cấp phát vùng nhớ riêng trong heap. 
+
+**hashCode()
+
+hashCode() trả về một số nguyên đại diện cho 1 instance của class. Khi 2 object là bằng nhau 
+thì hashCode() method của chúng cũng phải trả về giá trị bằng nhau. 
+Đó là lý do nếu đã override equals() method thì cũng phải override hashCode() method.
+_____________________________________****____________________________________________________
+
+
+Theo nguyên tắc mà hashCode() đưa ra thì 2 object bằng nhau thì phải có cùng mã hashCode(), 
+vì vậy khi chúng ta override equals() method thì nhất định phải override hashCode() .method.
+
+**ví dụ :
+
+class Team {
+
+    String city;
+    String department;
+
+    public Team(String city, String department) {
+        this.city = city;
+        this.department = department;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Team team = (Team) o;
+        return Objects.equals(city, team.city) &&
+                Objects.equals(department, team.department);
+    }
+}
+**HOMEJAVA Mối Quan Hệ Giữa Equals() Và HashCode() Trong Java
+Tags :Java CoreMối quan hệ giữa equals() và hashCode() trong Java Deft February 27, 2020
+Mục lục [ẩn]
+
+1 Equals()
+2 Overriding equals()
+3 equals() Contract
+4 Vi phạm tính đối xứng của equals() với thừa kế
+5 Tránh vi phạm equals() bất đối xứng
+6 hashCode()
+7 hashCode() Contract
+8 Vi phạm tính nhất quán của equals() và hashCode()
+9 Mối liên hệ giữa HashMap Key với hashCode()
+10 Implementation Helpers
+11 Tóm lược
+Trong bài viết này, chúng ta sẽ cùng nhau tìm hiểu về mối liên hệ giữa equals() và hashCode() method, và làm thế nào để override chúng đúng cách.
+
+Equals()
+Trong java, Object class mặc định là cha của tất cả các class, bên trong nó định nghĩa sẵn 2 method equals() và  hashCode() – đều này có nghĩa rằng tất cả các class đều mặc định sẽ có 2 method này.
+
+class Money {
+    int amount;
+    String currencyCode;
+    public Money(int amount, String currencyCode) {
+        this.amount = amount;
+        this.currencyCode = currencyCode;
+    }
+}
+class Main {
+    public static void main(String[] agrs) {
+        Money income = new Money(55, "USD");
+        Money expenses = new Money(55, "USD");
+        boolean balanced = income.equals(expenses); // FALSE
+    }
+}
+Rõ ràng là amount và currencyCode của income, expenses đều bằng nhau, thế nhưng kết quả so sánh từ equals() lại trả về FALSE? 
+
+Mặc định, equals() được triển khai trong Object class sẽ so sánh địa chỉ object thay vì so sánh giá trị các thuộc tính trong object. Hai instance income và expenses là duy nhất và được cấp phát vùng nhớ riêng trong heap. 
+
+Các kết phép so sánh dưới đây sẽ phù hợp với implement mặc định của equals() method.
+
+Money tmp = income;
+boolean b1 = income.equals(income); // true
+boolean b2 = tmp.equals(income); // true
+Overriding equals()
+Nếu bạn muốn equals() so sánh giá trị các thuộc tính trong object thay vì so sánh địa chỉ thì có thể override equals().
+
+class Money {
+    int amount;
+    String currencyCode;
+    public Money(int amount, String currencyCode) {
+        this.amount = amount;
+        this.currencyCode = currencyCode;
+    }
+    @Override
+    public boolean equals(Object o) {
+        if (o == this)
+            return true;
+        if (!(o instanceof Money))
+            return false;
+        Money other = (Money)o;
+        boolean currencyCodeEquals = (this.currencyCode == null && other.currencyCode == null)
+                || (this.currencyCode != null && this.currencyCode.equals(other.currencyCode));
+        return this.amount == other.amount && currencyCodeEquals;
+    }
+}
+class Main {
+    public static void main(String[] agrs) {
+        Money income = new Money(55, "USD");
+        Money expenses = new Money(55, "USD");
+        boolean balanced = income.equals(expenses); // TRUE 
+    }
+}
+equals() Contract
+Java SE đưa ra một số quy định chúng ta phải tuân thủ khi triển khai equals() method:
+
+Phản xạ: Một object phải bằng chính nó
+Đối xứng: x.equals(y) trả về kết quả giống với y.equals(x)
+Bắc cầu: Nếu x.equals(y), y.equals(z) thì x.equals(z)
+Nhất quán: Giá trị của equals() chỉ thay đổi khi 1 trong 2 object được so sánh bởi equals() thay đổi.
+Vi phạm tính đối xứng của equals() với thừa kế
+Khi chúng ta tạo 1 class thừa kế từ một class đã override equals() method. Hãy xem ví dụ sau:
+
+Tạo class WrongVoucher thừa kế Money
+
+class WrongVoucher extends Money {
+    private String store;
+    public WrongVoucher(int amount, String currencyCode, String store) {
+        super(amount, currencyCode);
+        this.store = store;
+    }
+    @Override
+    public boolean equals(Object o) {
+        if (o == this)
+            return true;
+        if (!(o instanceof WrongVoucher))
+            return false;
+        WrongVoucher other = (WrongVoucher)o;
+        boolean currencyCodeEquals = (this.currencyCode == null && other.currencyCode == null)
+                || (this.currencyCode != null && this.currencyCode.equals(other.currencyCode));
+        boolean storeEquals = (this.store == null && other.store == null)
+                || (this.store != null && this.store.equals(other.store));
+        return this.amount == other.amount && currencyCodeEquals && storeEquals;
+    }
+    
+}
+Xem kết quả dưới đây để thấy trường hợp vi phạm tính đối xứng của equals().
+
+class Main {
+    public static void main(String[] agrs) {
+        Money cash = new Money(42, "USD");
+        WrongVoucher voucher = new WrongVoucher(42, "USD", "Amazon");
+        boolean b1 = voucher.equals(cash); // FALSE
+        
+        boolean b2 = cash.equals(voucher); // TRUE
+    }
+}
+Giải thích:
+
+WrongVoucher class thừa kế từ Money, nên 1 instance của WrongVoucher class cũng là instance của Money class, đồng thời nó chứa đầy đủ các giá trị của Money nên equals() của Money sẽ trả về true.
+Thế nhưng, Money instance lại không phải là instance của WrongVoucher class nên kết quả là false. 
+Như vậy đã vi phạm nguyên tắc đối xứng nếu x.equals(y) true thì y.equals(x) cũng phải true.
+
+Tránh vi phạm equals() bất đối xứng
+Để tránh vi phạm equals() bất đối xứng, chúng ta nên áp dụng mối quan hệ HAS-A thay cho thừa kế. 
+
+Chúng ta sẽ sử dụng Money class như là 1 thuộc tính của Voucher thay vì thừa kế từ nó. 
+
+class Voucher {
+ 
+    private Money value;
+    private String store;
+ 
+    Voucher(int amount, String currencyCode, String store) {
+        this.value = new Money(amount, currencyCode);
+        this.store = store;
+    }
+ 
+    @Override
+    public boolean equals(Object o) {
+        if (o == this)
+            return true;
+        if (!(o instanceof Voucher))
+            return false;
+        Voucher other = (Voucher) o;
+        boolean valueEquals = (this.value == null && other.value == null)
+          || (this.value != null && this.value.equals(other.value));
+        boolean storeEquals = (this.store == null && other.store == null)
+          || (this.store != null && this.store.equals(other.store));
+        return valueEquals && storeEquals;
+    }
+ 
+    // other methods
+}
+hashCode()
+hashCode() trả về một số nguyên đại diện cho 1 instance của class. Khi 2 object là bằng nhau thì hashCode() method của chúng cũng phải trả về giá trị bằng nhau. Đó là lý do nếu đã override equals() method thì cũng phải override hashCode() method.
+
+hashCode() Contract
+Java SE cũng đưa ra một số quy định cần phải tuân thủ khi override hashCode method.
+
+Thống nhất trong nội bộ: Giá trị hashCode() sẽ không thay đổi trong các lần gọi trên cùng 1 object. Các object bằng nhau thì hashCode() cũng phải có giá trị bằng nhau.
+Sự va chạm: Các đối tượng không bằng nhau có thể có giá trị hashCode() giống nhau.
+Vi phạm tính nhất quán của equals() và hashCode()
+Theo nguyên tắc mà hashCode() đưa ra thì 2 object bằng nhau thì phải có cùng mã hashCode(), vì vậy khi chúng ta override equals() method thì nhất định phải override hashCode() method.
+
+Xét ví dụ dưới đây
+
+class Team {
+    String city;
+    String department;
+    public Team(String city, String department) {
+        this.city = city;
+        this.department = department;
+    }
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Team team = (Team) o;
+        return Objects.equals(city, team.city) &&
+                Objects.equals(department, team.department);
+    }
+}
+
+--------Team class chỉ override equals() method, nhưng lại không 
+override hashCode() method nên nó vẫn sẽ sử dụng hashCode() của Object class. 
+Như vậy các instance của Team class sẽ luôn có giá trị hashCode() khác nhau kể của 
+khi chúng bằng nhau. Như vậy vi phạm tính thống nhất của equals() và hashCode().
+
+class Main {
+    public static void main(String[] agrs) {
+        Team t1 = new Team("HCM", "development");
+        Team t2 = new Team("HCM", "development");
+        boolean b = t1.equals(t2);
+        System.out.println("Equals: " + b);
+        System.out.println(t1.hashCode());
+        System.out.println(t2.hashCode());
+    }
+}
+*******************************************************************************************
+
+
+*******Mối liên hệ giữa HashMap Key với hashCode().
+HashMap là cấu trúc dữ liệu dạng <key, value>, khi chúng ta truy xuất các phần tử
+ theo object key thì HashMap sẽ kiểm tra xem có phần tử nào có key trùng giá trị với hashCode() 
+của object key thì tiến hành trả về.
+
+class Main {
+    public static void main(String[] agrs) {
+        Map<Team,String> leaders = new HashMap<>();
+        leaders.put(new Team("New York", "development"), "Anne");
+        leaders.put(new Team("Boston", "development"), "Brian");
+        leaders.put(new Team("Boston", "marketing"), "Charlie");
+
+        Team myTeam = new Team("New York", "development");
+        String myTeamLeader = leaders.get(myTeam); // NULL
+    }
+}
+
+Mặc dù chính ta đã định nghĩa rằng 2 Team object bằng nhau khi chúng có cùng giá trị city và department, 
+trong ví dụ trên chúng ta mong muốn kết quả trả về là “Anne” thế nhưng kết quả lại là null.
+
+ *tóm lại
+
+---Override equals() và hashCode() method khi chúng ta muốn so sánh 2 object theo giá trị thay vì so sánh theo địa chỉ, 
+thông thường cách này thường áp dụng khi project của chúng ta có những yêu cầu này thật sự. Còn thông thường mặc định java 
+xác định 2 object là bằng nhau khi chúng có cùng địa chỉ, đây là cơ chế được dùng phổ biến hơn.
+
+
+

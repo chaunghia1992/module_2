@@ -1,6 +1,6 @@
-package com.codegym.arraymax;
+package com.codegym.ArrayMax;
 import java.util.Scanner;
-public class arraymax {
+public class ArrayMax {
     public static void main(String[] args) {
         int size;
         int[] array;

@@ -1,8 +1,8 @@
-package com.codegym.comparator;
+package com.codegym.Comparator;
 
 import java.util.Comparator;
 
-public class comparator_comparable {
+public class comparator_Comparable {
 
     public class CompareByAge implements Comparator<Employee> {
         @Override

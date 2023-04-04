@@ -1,27 +1,27 @@
-package com.codegym.client;
+package com.codegym.Client;
 
 import java.util.*;
 
-public class clientStore {
-    static List<client> client1;
+public class ClientStore {
+    static List<Client> client1;
     private static final Scanner scanner = new Scanner(System.in);
 
-    public clientStore() {
+    public ClientStore() {
         client1 = new ArrayList<>();
-        client client;
+        Client client;
 
-        client = new client(1L, "văn nghĩa", "vannghia@gmail.com....","Hue", new Date());
+        client = new Client(1L, "văn nghĩa", "vannghia@gmail.com....","Hue", new Date());
         client1.add(client);
-        client1.add(new client(2L, "quốc đạt", "quocđat@gmail.com....","hue", new Date()));
-        client1.add(new client(3L, "quang hiếu", "quanghieu@gmail.com....", "huê",new Date()));
-        client1.add(new client(19L, "hân hoàn", "hanhoan@gmail.com...", "hue",new Date()));
-        client1.add(new client(5L, "công bằng", "congbang@gmail.com....", "hue",new Date()));
-        client1.add(new client(6L, "thanh thiện", "thanhthien@gmail.com....", "hue",new Date()));
+        client1.add(new Client(2L, "quốc đạt", "quocđat@gmail.com....","hue", new Date()));
+        client1.add(new Client(3L, "quang hiếu", "quanghieu@gmail.com....", "hue",new Date()));
+        client1.add(new Client(19L, "hân hoàn", "hanhoan@gmail.com...", "hue",new Date()));
+        client1.add(new Client(5L, "công bằng", "congbang@gmail.com....", "hue",new Date()));
+        client1.add(new Client(6L, "thanh thiện", "thanhthien@gmail.com....", "hue",new Date()));
     }
 
     public static void showclient() {
         System.out.printf("%5s | %30s | %20s | %30s | %10s \n", "ID", "Name", "Email", "adress", "date");
-        for (com.codegym.client.client client : client1) {
+        for (Client client : client1) {
             System.out.printf("%5s | %30s | %20s | %30s | %10s \n",
                     client.getId(), client.getName(), client.getEmail(),client.getAddress(),client.getEntryDate());
 
@@ -29,9 +29,9 @@ public class clientStore {
         }
 
     }
-    public static void showclient(List<client> client1) {
+    public static void showclient(List<Client> client1) {
         System.out.printf("%5s | %30s | %20s | %30s | %10s \n", "ID", "Name", "Description", "Date", "gmail");
-        for (com.codegym.client.client client : client1) {
+        for (Client client : client1) {
             System.out.printf("%5s | %30s | %20s | %30s | %10s \n"
                     ,client.getId(), client.getName(), client.getEmail(),client.getAddress(),client.getEntryDate());
 
@@ -51,7 +51,7 @@ public class clientStore {
         String adress = scanner.nextLine();
 
 
-        client client = new client();
+        Client client = new Client();
         long maxId = 0;
         client.setId(maxId + 1);
         client.setName(name);
@@ -77,7 +77,7 @@ public class clientStore {
         System.out.println("Nhập adress : ");
         String adress = scanner.nextLine();
 
-        for (client client : client1) {
+        for (Client client : client1) {
             if (id == client.getId()) {
                 client.setName(nameNew);
                 client.setEmail(Email);
@@ -102,7 +102,7 @@ public class clientStore {
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        clientStore clientStore = new clientStore();
+        ClientStore clientStore = new ClientStore();
         boolean checkActionMenu = true;
         do {
             System.out.println("Menu quản lý khách hàng: ");
@@ -155,8 +155,8 @@ public class clientStore {
     private static void searchByName() {
         System.out.println("Nhập tên bạn muốn tìm kiếm: ");
         String kw = scanner.nextLine();
-        List<client> results = new ArrayList<>();
-        for (com.codegym.client.client client : client1) {
+        List<Client> results = new ArrayList<>();
+        for (Client client : client1) {
             if (client.getName().contains(kw)) {
                 results.add(client);
             }

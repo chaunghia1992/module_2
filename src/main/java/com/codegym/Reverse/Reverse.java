@@ -1,6 +1,6 @@
-package com.codegym.daonguoc;
+package com.codegym.Reverse;
 import java.util.Scanner;
-public class daonguoc {
+public class Reverse {
 
     public static void main(String[] args) {
         int size;

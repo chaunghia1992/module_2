@@ -1,8 +1,8 @@
-package com.codegym.findwishes;
+package com.codegym.FindWishes;
 
 import java.util.Scanner;
 
-public class findwishes1 {
+public class FindWishes1 {
     public static void main(String[] args){
         int a ;
         int b ;

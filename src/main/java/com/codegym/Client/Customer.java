@@ -1,4 +1,4 @@
-package com.codegym.client;
+package com.codegym.Client;
 
 
 

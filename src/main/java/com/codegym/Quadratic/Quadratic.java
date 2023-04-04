@@ -1,4 +1,4 @@
-package com.codegym.quadratic;
+package com.codegym.Quadratic;
 
 public class Quadratic {
     private double a, b, c;

@@ -1,15 +1,15 @@
-package com.codegym.client;
+package com.codegym.Client;
 
 import java.util.Date;
 
-public class client {
+public class Client {
     private long id;
     private String name;
     private String email;
     private String address;
     private Date entryDate;
-public client(){}
-    public client(long id, String name, String email, String address, Date entryDate) {
+public Client(){}
+    public Client(long id, String name, String email, String address, Date entryDate) {
         this.id = id;
         this.name = name;
         this.email = email;

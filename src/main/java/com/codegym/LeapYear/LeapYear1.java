@@ -1,8 +1,8 @@
-package com.codegym.leapyear;
+package com.codegym.LeapYear;
 
 import java.util.Scanner;
 
-public class leapyear1 {
+public class LeapYear1 {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
         int year;

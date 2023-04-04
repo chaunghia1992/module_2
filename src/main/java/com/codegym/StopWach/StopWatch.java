@@ -1,6 +1,6 @@
-package com.codegym.stopwach;
+package com.codegym.StopWach;
 
-public class stopwatch {
+public class StopWatch {
     private long startTime;
     private long endTime;
 
@@ -19,7 +19,7 @@ public long getStartTime(){
 
 }
     public static void  main (String[] args) throws InterruptedException{
-    stopwatch stopwatch = new stopwatch();
+    StopWatch stopwatch = new StopWatch();
 
         Thread thread = null;
         thread.sleep(5000);

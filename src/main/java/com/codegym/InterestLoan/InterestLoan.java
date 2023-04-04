@@ -1,6 +1,6 @@
-package com.codegym.interestloan;
+package com.codegym.InterestLoan;
 import java.util.Scanner;
-public class interestloan {
+public class InterestLoan {
     public static void main(String[] args){
         double monney = 1.0;
         int month = 1 ;
