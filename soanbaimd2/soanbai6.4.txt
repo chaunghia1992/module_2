@@ -1,0 +1,107 @@
+*** ngoại lệ (Exception) là một tình huống bất thường xảy ra trong quá trình thực thi
+chương trình. Khi một ngoại lệ xảy ra, thì JVM sẽ ném ra một đối tượng ngoại lệ 
+(Exception object), và tìm kiếm các xử lý ngoại lệ (Exception handler) 
+phù hợp để xử lý ngoại lệ đó.
+
+Một số loại ngoại lệ phổ biến trong Java bao gồm:
+
+1.RuntimeException: Đây là loại ngoại lệ xảy ra khi chương trình đang thực thi, 
+ví dụ như NullPointerException hoặc ArrayIndexOutOfBoundsException.
+
+2.Checked Exception: Đây là loại ngoại lệ được kiểm tra bởi trình biên dịch, 
+ví dụ như FileNotFoundException. Nếu bạn sử dụng một phương thức mà nó ném 
+ra một Checked Exception, bạn phải xử lý nó bằng try-catch hoặc throws.
+
+3.Error: Đây là loại ngoại lệ nghiêm trọng hơn RuntimeException, 
+ví dụ như OutOfMemoryError hoặc StackOverflowError. Những ngoại lệ 
+này thường không được xử lý, vì chúng cho thấy rằng có một vấn đề 
+nghiêm trọng xảy ra với hệ thống hoặc JVM.
+
+_________________________________________________________________________________________
+
+**Khối try/catch/finally trong Java được sử dụng để xử lý ngoại lệ trong chương trình. 
+Khối try sẽ chứa các đoạn mã có thể gây ra ngoại lệ. Nếu một ngoại lệ được ném ra trong
+ khối try, thì nó sẽ được bắt bởi khối catch tương ứng. Cuối cùng, khối finally
+ sẽ được thực thi dù có ngoại lệ hay không.
+
+Cú pháp của khối try/catch/finally như sau:
+try {
+    // các đoạn mã có thể gây ra ngoại lệ
+} catch (ExceptionType e) {
+    // xử lý ngoại lệ
+} finally {
+    // đoạn mã được thực thi dù có ngoại lệ hay không
+}
+__________________________________________________________________________________
+Ví dụ : giả sử chúng ta có một phương thức để chia hai số nguyên và xử lý ngoại lệ 
+nếu số bị chia là 0:
+__________________________________________________________________________________
+
+public static int divide(int numerator, int denominator) {
+    try {
+        return numerator / denominator;
+    } catch (ArithmeticException e) {
+        System.out.println("Cannot divide by zero");
+        return 0;
+    } finally {
+        System.out.println("This will always be executed");
+    }
+}
+
+Trong ví dụ này, nếu số mẫu bằng 0, một ngoại lệ ArithmeticException sẽ được ném ra 
+và bắt bởi khối catch, nơi mà một thông báo lỗi sẽ được in ra và phương thức sẽ 
+trả về giá trị 0. Sau đó, đoạn mã trong khối finally sẽ được thực thi, 
+cho dù có ngoại lệ hay không.
+Với đầu vào là 6 và 3, phương thức sẽ trả về giá trị 2 và in ra thông báo
+ "This will always be executed". Tuy nhiên, nếu đầu vào là 6 và 0, phương thức sẽ 
+bắt ngoại lệ ArithmeticException, in ra thông báo "Cannot divide by zero", 
+trả về giá trị 0 và sau đó in ra thông báo "This will always be executed".
+------------------------------------------------------------------------------------
+
+Trong Java, để ném một ngoại lệ từ một phương thức, ta sử dụng lệnh `throw`.
+ Lệnh này được sử dụng để tạo ra một đối tượng ngoại lệ và ném nó ra khỏi phương thức đó.
+
+Cú pháp của lệnh throw như sau:
+
+throw new ExceptionType("message");
+
+Trong đó, ExceptionType là kiểu ngoại lệ cần ném và "message" là thông báo ngoại lệ.
+
+Ví dụ, giả sử chúng ta có một phương thức để kiểm tra một số nguyên có phải là 
+số chẵn hay không. Nếu số đó là số lẻ, chúng ta muốn ném ra một ngoại lệ .
+`IllegalArgumentException` để báo cho người dùng biết rằng đầu vào không hợp lệ.
+ Ta có thể sử dụng lệnh throw để thực hiện việc này như sau:
+
+ public static boolean isEven(int number) throws IllegalArgumentException {
+    if (number % 2 != 0) {
+        throw new IllegalArgumentException("Number must be even");
+    }
+    return true;
+}
+
+Ngoài ra, khi một phương thức có thể ném ra một ngoại lệ, ta có thể sử dụng 
+từ khóa throws để khai báo kiểu ngoại lệ đó. Từ khóa này được sử dụng 
+để báo cho người dùng biết rằng phương thức có thể ném ra ngoại lệ, 
+và người dùng cần phải xử lý nó.
+
+Cú pháp của `throws` như sau:
+
+public static void methodName() throws ExceptionType {
+    // code
+}
+
+Ví dụ, giả sử chúng ta có một phương thức để mở một file trong Java, 
+và việc mở file có thể gây ra ngoại lệ IOException. Ta có thể sử dụng từ khóa 
+`throws` để khai báo rằng phương thức có thể ném ra ngoại lệ này, 
+và người dùng cần phải xử lý nó:
+
+public static void openFile(String fileName) throws IOException {
+    // code to open file
+}
+
+Khi gọi phương thức này, người dùng sẽ cần phải sử dụng khối `try-catch` 
+để xử lý ngoại lệ `IOException`.
+
+
+
+

@@ -1,0 +1,94 @@
+Soanbai16.3
+***********************************************************************************************************************
+kế thừa là : Bản chất kế thừa (inheritance) là phát triển lớp mới dựa trên các lớp đã có.
+ Xây dựng các lớp mới có sẵn các đặc tính của lớp cũ, đồng thời lớp mới có thể mở rộng các đặc tính của nó.
+
+Ví dụ:
+
+Lớp Người có các thuộc tính như tên, tuổi, chiều cao, cân nặng,…; các phương thức như ăn, ngủ, chơi,…
+Lớp Sinh Viên thừa kế từ lớp Người, thừa kế được các thuộc tính tên, tuổi, chiều cao, cân nặng
+,…; các phương thức ăn, ngủ, chơi,…Bổ sung thêm các thuộc tính như mã số sinh viên, số tín chỉ tích lũy,…,
+ các phương thức như tham dự lớp học, thi.
+*****
++ override là :Overriding (ghi đè) có nghĩa là có 2 phương thức giống nhau về tên và tham số truyền vào. 
+Một phương thức ở lớp cha, còn cái kia ở lớp con. Overriding  cho phép lớp con có thể thực hiện riêng biệt cho phương thức
+ mà lớp cha đã cung cấp.
+
+Ví dụ: Như trong bài trước ta tạo lớp Student kế thừa lớp Person. Với phương thức getInfo của lớp Person
+ chỉ in được thông tin name, age, height trong khi lớp Student còn có thuộc tính universityName.
+ Như vậy, ta sẽ overriding lại phương thức getInfo:
+
+public class Student extends Person {
+	
+	public String universityName;
+
+	public Student(String name, int age, float height, String universityName) {
+		super(name, age, height);
+		this.universityName = universityName;
+	}
+	
+
+	public void getInfo() {
+		super.getInfo();
+		System.out.println("University Name:"+this.universityName);
+	}
+	
+}
+
+Khi ta khai báo phương thức getInfo trong lớp Student, có nghĩa ta đang overrding. Và đối tượng thuộc lớp Student sẽ gọi phương thức getInfo từ lớp Student thay vì lớp Person.
+
+Cách chống Overriding
+Nếu không muốn lớp con có thể Overriding lại phương thức nào đó, ta sẽ sử dụng từ khóa final
+
+public final void getInfo() {
+		System.out.println("Name:"+this.name);
+		System.out.println("Age:"+this.age);
+		System.out.println("Height:"+this.height);
+}
+
+-1 phương thức ở lớp cha được override ở lớp con thì phương thức override ở lớp con không được phép thu hẹp
+ tầm vực của phương thức đó ở lớp cha.
+
+-Phương thức ở lớp cha được override ở lớp con thì phương thức override ở lớp con không được phép phát sinh 
+những ngoại lệ kiểm tra (checked exception) khác loại hoặc không có quan hệ kế thừa với các ngoại lệ
+ được ném ra từ phương thức đó ở lớp cha.
+
+-Sử dụng từ khóa super để gọi phương thức được override ở lớp cha tại phương thức override ở lớp con.
+*****
+
++ Overloading trong Java là một kỹ thuật cho phép bạn định nghĩa nhiều phương thức có cùng tên trong một lớp,
+nhưng với các đặc điểm khác nhau như số lượng tham số, kiểu dữ liệu của các tham số hoặc kiểu trả về.
+
+Khi một phương thức được gọi trong Java, trình biên dịch sẽ xác định phương thức nào sẽ được sử dụng dựa trên số lượng 
+và kiểu dữ liệu của các tham số được truyền vào. Vì vậy, nếu bạn định nghĩa nhiều phương thức cùng tên,
+ nhưng với các tham số khác nhau, thì bạn có thể sử dụng cùng một tên phương thức để thực hiện các hoạt động khác nhau trong cùng một lớp.
+
+***************
+Từ khóa final trong Java được sử dụng để hạn chế người dùng. Từ khóa final có thể được sử dụng trong nhiều ngữ cảnh.
+
+1--Biến final: bạn không thể thay đổi giá trị của biến final (nó sẽ là hằng số).
+
+2--Phương thức final: bạn không thể ghi đè phương thức final.
+
+3--Lớp final: bạn không thể kế thừa lớp final.
+
+4--Biến static final trống: Một biến final mà không được khởi tạo tại thời điểm khai báo được gọi là biến final trống.
+
+......((Từ khóa final có thể được áp dụng với các biến, một biến final mà không có giá trị nào được gọi là biến final 
+trống hoặc biến final không được khởi tạo. Nó chỉ có thể được khởi tạo trong Constructor. Biến final trống cũng có thể 
+là static mà sẽ chỉ được khởi tạo trong khối static.)).
+
+****************
+
+***Đa hình trong kế thừa (polymorphism) là tính chất cho phép một đối tượng có thể thể hiện nhiều hình dạng khác nhau,
+ tùy vào ngữ cảnh sử dụng. Các đối tượng có thể được sử dụng trong các trường hợp khác nhau mà không cần thay đổi mã nguồn.
+
+Trong Java, đa hình được thực hiện thông qua kế thừa và giao diện (interface). Khi một lớp kế thừa từ một lớp cha,
+ nó có thể sử dụng tất cả các thuộc tính và phương thức được định nghĩa trong lớp cha.
+ Nếu lớp con muốn định nghĩa lại một phương thức đã được định nghĩa trong lớp cha, 
+nó có thể ghi đè phương thức đó bằng cách sử dụng từ khóa "override".
+
+********************************************************************************************************
+
+toString() là một phương thức trong Java được định nghĩa trong lớp Object, lớp cơ bản của mọi đối tượng trong Java.
+ Phương thức này trả về một chuỗi đại diện cho đối tượng đó.

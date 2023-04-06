@@ -1,0 +1,115 @@
+Đọc tìm hiểu và demo
++ biến static trong java
+https://www.youtube.com/watch?v=YTYnNFCcDXA
++ Nested class là gì?
++ biến instance và biến local, biến static  trong java
+https://viettuts.vn/java/bien-trong-java
+---------------------------------------------------------------------------//
+
++ biến static trong java :
+
+tạo biến tĩnh :
+khi khai báo 1 biến tĩnh,biến đó có thể lưu thông tin chung  cho tất cả 
+các đối tượng.
+
+ví dụ :tạo một class student của một trường" kteam education". như vậy chỉ cần
+một bộ nhớ chung lưu thông tin tên trường , và sẽ tiết kiệm bộ nhớ hơn .ngoài ra
+ta có thể tạo một biến đếm có bao nhiêu đối tượng studen đã được tạo ra.
+
+ public class student {
+              public String name;
+              public int ager;
+              public float height;
+public static String universityname = "kteam education";
+public static int total = 0; //total cho là tổng số sinh viên.
+public student(String name, int age, float height){
+            this.name = name;
+            this.age = age;
+            this.height = height;
+total +=1;
+}
+}
+
+*** ta dùng 2 biến tĩnh là universtityname và total, mỗi khi ta khởi tạo một đối tượng
+của lớp student, ta sẽ tăng giá trị total lên 1 đơn vị .
+********viết chương trình main..-----------------------------------------------------
+
+public class helloworld {
+      public static void main (String[] args) {
+             student a  = new student ("nghia", 31 , 1.68f);
+ 
+             System.out.println("university ( from class):" +student.universityName);
+             System.out.println("university (from instance):" + a.universityName);
+             System.out.println("Total (from class):" + Student.total);
+             
+             Student b = new Stundent ( "hoan" , 27 , 2.0f);
+             System.out.println ("Total ( from instance):" + b.total);
+}
+
+## tạo phương thức tĩnh :
+
+phương thức tĩnh cũng giống như biến tĩnh ,có thể gọi mà không cần khởi tạo đối tượng
+phương thức tĩnh rất thích hợp cho những class thư viện viết sẵn , không cần khởi tạo 
+mà chỉ cần gọi ra để chạy chương trình .
+
+public class helloworld {
+      public static void main (String[] args) {
+         Student.getInfoUniversity();
+}
+}
+----Tuy nhiên, phương thức static không thể tác động đến thuộc tính và phương thức 
+liên quan đối tượng (non-static)." non-static là đối tượng không tĩnh , như (name).
+**********************************************************************************
++ Nested class là gì?
+
+Trong Java, Nested Class (lớp lồng nhau) là một lớp được khai báo bên trong một lớp khác.
+
+Java hỗ trợ 4 loại nested class:
+
+1 .Static nested class: Lớp được khai báo là static được xem như là một thành viên tĩnh của lớp bao,
+ và không thể truy cập các biến phi tĩnh của lớp bao. Để truy cập các biến và phương thức của lớp bao, 
+chúng ta cần sử dụng tên của lớp bao, theo sau là dấu chấm.
+
+2.Non-static nested class (inner class): Lớp được khai báo là non-static được xem như là một thành viên phi tĩnh của lớp bao 
+và có thể truy cập các biến phi tĩnh và phi tĩnh của lớp bao.
+
+3.Local class: Lớp được khai báo bên trong một phương thức hoặc khối lệnh,
+ và chỉ có thể được truy cập bên trong phương thức/khối lệnh đó.
+
+4.Anonymous class: Lớp được khai báo mà không có tên, được sử dụng khi chúng ta cần triển khai một interface
+ hoặc lớp trừu tượng mà chỉ có một phương thức trừu tượng.
+
+Nested class trong Java có thể giúp cho mã của chúng ta trở nên dễ đọc và dễ hiểu hơn bằng cách đóng gói
+ các phần liên quan với nhau vào một nơi, đồng thời giảm thiểu sự lộn xộn của mã.
+****************************************************************************************
+----biến instance là biến được khai báo bên trong một lớp (class), nhưng bên ngoài bất kỳ phương thức nào của lớp đó.
+ Biến instance tồn tại và có thể truy cập được từ bất kỳ phương thức nào của lớp đó, bao gồm cả các phương thức tĩnh (static).
+ Biến instance thường được sử dụng để lưu trữ các thuộc tính của đối tượng và có giá trị khởi tạo mặc định.
+****
+
+public class Person {
+    String name; // đây là biến instance
+
+    public void setName(String name) {
+        this.name = name;
+    }
+}
+
+Trong ví dụ này, biến name được khai báo bên trong lớp Person nhưng bên ngoài phương thức setName(),
+ cho phép truy cập từ bất kỳ phương thức nào của lớp Person.
+
+Trong khi đó, biến local là biến được khai báo bên trong một phương thức và chỉ có thể truy cập được
+ từ bên trong phương thức đó. Biến local được sử dụng để lưu trữ các giá trị 
+tạm thời trong phương thức và bị hủy sau khi phương thức kết thúc.
+_____________________________________________
+ *****biến local là biến được khai báo bên trong một phương thức và chỉ có thể truy cập được từ bên trong phương thức đó
+ Biến local được sử dụng để lưu trữ các giá trị tạm thời trong phương thức và bị hủy sau khi phương thức kết thúc.
+_______________________
+public class Calculator {
+    public int add(int a, int b) {
+        int sum = a + b; // đây là biến local
+        return sum;
+    }
+}
+
+

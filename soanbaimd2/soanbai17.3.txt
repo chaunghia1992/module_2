@@ -1,0 +1,110 @@
+ --Java không cho đa kế thừa vì :
+Java không cho phép đa kế thừa bởi vì việc đa kế thừa có thể dẫn đến các vấn đề phức tạp trong việc quản lý lớp và thừa kế.
+Trong một hệ thống đa kế thừa, một lớp có thể kế thừa các thuộc tính và phương thức từ nhiều lớp cha khác nhau. 
+Tuy nhiên, điều này có thể gây ra các xung đột giữa các phương thức hoặc thuộc tính được kế thừa từ các lớp cha khác nhau. 
+Nếu một lớp con muốn ghi đè một phương thức được kế thừa từ nhiều lớp cha khác nhau, thì điều này sẽ làm cho mã nguồn của lớp trở nên phức tạp hơn,
+ khó bảo trì và dễ dàng gây ra lỗi.
+
+--Lớp abstract là :
+Lớp abstract là một lớp trong Java không thể tạo đối tượng trực tiếp, mà chỉ được sử dụng để định nghĩa các phương thức mà
+ các lớp con phải triển khai (implement).
+Một lớp abstract có thể có cả phương thức abstract và phương thức bình thường (non-abstract). Tuy nhiên, nếu một lớp có ít nhất một phương
+thức abstract, thì lớp đó phải được định nghĩa là abstract.
+
+--phương thức abstract là :
+Một phương thức abstract là một phương thức chỉ có khai báo mà không có phần thân (body). Khi một lớp kế thừa một lớp abstract,
+ nó phải triển khai tất cả các phương thức abstract được khai báo trong lớp abstract đó. Nếu một lớp con không triển khai một phương thức abstract,
+ thì lớp con đó cũng phải được khai báo là abstract.Khi nào sử dụng lớp abstract.
+
+-- sử dụng lớp abstract khi :
+Lớp abstract được sử dụng khi chúng ta muốn định nghĩa một lớp có các phương thức chung, nhưng không muốn tạo đối tượng từ lớp đó.
+Thay vào đó, các lớp con phải triển khai các phương thức abstract của lớp cha.
+
+**Các trường hợp thường sử dụng lớp abstract bao gồm:
+
+1.Định nghĩa các phương thức chung: Khi một số lớp trong hệ thống có các phương thức chung, ta có thể định nghĩa các phương thức 
+đó trong một lớp abstract và các lớp con triển khai các phương thức đó theo cách khác nhau.
+
+2.Đảm bảo tính trừu tượng: Lớp abstract giúp đảm bảo tính trừu tượng trong thiết kế hệ thống bởi vì các phương thức abstract 
+không có thân phương thức (body), và chỉ có khai báo. Các lớp con cần phải triển khai các phương thức này để định nghĩa cách thức thực hiện cụ thể.
+
+3.Đảm bảo tính đa hình: Lớp abstract cũng giúp đảm bảo tính đa hình bởi vì các lớp con có thể triển khai các phương thức abstract theo cách khác nhau,
+ tùy thuộc vào nhu cầu cụ thể của từng lớp.
+
+4.Giảm thiểu việc lặp lại mã: Khi có nhiều lớp con cần triển khai các phương thức chung, việc định nghĩa các phương thức đó trong một lớp abstract 
+giúp giảm thiểu việc lặp lại mã trong các lớp con.
+
+--Các tính chất của lớp abstract trong Java bao gồm:
+
+1.Không thể tạo đối tượng trực tiếp: Lớp abstract không thể tạo đối tượng trực tiếp bằng cách sử dụng toán tử new. 
+Nếu bạn cố gắng tạo một đối tượng từ một lớp abstract, Java sẽ hiển thị lỗi tại thời điểm biên dịch
+
+2.Có thể chứa phương thức abstract: Lớp abstract có thể chứa cả phương thức abstract và phương thức bình thường. 
+Tuy nhiên, nếu một lớp abstract chứa ít nhất một phương thức abstract, thì lớp đó cũng phải được định nghĩa là abstract.
+
+3.Các phương thức abstract không có phần thân (body): Phương thức abstract chỉ có khai báo mà không có phần thân (body). 
+Phương thức abstract giúp đảm bảo tính trừu tượng và linh hoạt trong thiết kế hệ thống.
+
+4.Các lớp con phải triển khai các phương thức abstract: Khi một lớp con kế thừa một lớp abstract, nó phải triển khai tất cả các 
+phương thức abstract được khai báo trong lớp abstract đó. Nếu một lớp con không triển khai một phương thức abstract, 
+thì lớp con đó cũng phải được khai báo là abstract.
+
+5.Được sử dụng để định nghĩa các phương thức chung: Lớp abstract được sử dụng để định nghĩa các phương thức chung 
+cho một nhóm lớp có liên quan, nhưng mỗi lớp cụ thể lại triển khai các phương thức đó theo cách khác nhau.
+
+6.Có tính đa hình: Lớp abstract cũng giúp đảm bảo tính đa hình bởi vì các lớp con có thể triển khai các 
+phương thức abstract theo cách khác nhau, tùy thuộc vào nhu cầu cụ thể của từng lớp.
+
+*********************************************************
+-- Interface là : một cấu trúc tương tự như lớp , nhưng chỉ chứa các hằng số và abstract method.
+
+-interface quy định các hành vi chung cho các lớp triển khai nó
+-sử dụng từ khóa interface để định nghĩa interface.
+
+• Cúpháp:
+
+modifierinterface InterfaceName {
+/** Constant declarations */
+/** Abstract method signatures*/
+}
+• Vídụ:
+public interface Flyable{
+}
+
+--Các tính chất của interface :
+
++ định nghĩa một interface tạo ra một kiểu dữ liệu mới.
++ không thể tạo đối tượng của interface.
++ interface không thể chứa các phương thức không abstract.
++ khi một lớp triễn khai interface thì cần triễn khai tất cả các phương thức 
+được khai báo trong interface đó.
++ interface có thể được thiết kế để khai báo các phương thức chung cho các lớp
+không liên quan với nhau (khác với abstract dass, được thừa kế bởi các lớp 
+có liên quan với nhau)
++ interface bổ sung cho việc java không hổ trợ " đa kế thừa ".
+___________________________________________________________________________________________________
+
+- Khi nào dùng abstrac khi nào dùng interface là :
+
++ Lớp abstract:
+
+-Sử dụng lớp abstract khi bạn muốn chia sẻ mã giữa các lớp con: Lớp abstract cho phép bạn tạo 
+các phương thức và thuộc tính chung giữa các lớp con, giúp bạn giảm thiểu mã lặp lại.
+
+-Sử dụng lớp abstract khi bạn muốn cung cấp một phương thức có sẵn nhưng không phải 
+là phương thức bắt buộc: Lớp abstract cho phép bạn cung cấp một phương thức mà các lớp con không cần triển khai, 
+bởi vì nó đã có sẵn trong lớp abstract.
+
+- Sử dụng lớp abstract khi bạn muốn triển khai các phương thức non-abstract: Lớp abstract cho phép bạn triển khai 
+các phương thức non-abstract, giúp bạn đảm bảo tính trừu tượng và linh hoạt trong thiết kế hệ thống.
+--------------------------
+
+Interface:
+----Sử dụng interface khi bạn muốn xác định các hành động có thể thực hiện bởi các đối tượng: Interface cho phép bạn định nghĩa 
+các phương thức mà các đối tượng có thể triển khai, nhưng không cung cấp bất kỳ mã thực thi nào.
+
+--Sử dụng interface khi bạn muốn giảm thiểu sự phụ thuộc giữa các lớp: Interface giúp giảm thiểu sự phụ thuộc giữa 
+các lớp trong hệ thống, bởi vì các lớp không cần kế thừa từ các lớp khác.
+
+--Sử dụng interface khi bạn muốn triển khai nhiều interface: Một lớp có thể triển khai nhiều interface, 
+giúp bạn tăng tính linh hoạt trong thiết kế hệ thống.

@@ -1,0 +1,48 @@
+
++ Generics trong Java là một tính năng cho phép bạn tạo ra các lớp, phương thức và interface 
+có thể áp dụng cho nhiều kiểu dữ liệu khác nhau một cách linh hoạt. Với generics, bạn có thể định nghĩa một lớp, 
+phương thức hoặc interface mà không biết kiểu dữ liệu cụ thể được sử dụng khi chạy chương trình.
+
+Việc sử dụng generics giúp cho mã nguồn của bạn trở nên rõ ràng hơn, dễ hiểu hơn và an toàn hơn. 
+Nó giúp bạn kiểm soát kiểu dữ liệu của đối tượng mà bạn đang làm việc, giúp tránh các lỗi 
+kiểu dữ liệu phổ biến trong Java như ClassCastException.
+
+Cách sử dụng generics trong Java là sử dụng các tham số kiểu dữ liệu (type parameter) 
+để định nghĩa lớp, phương thức hoặc interface.
+***************
+ví dụ :
+
+public class MyList<T> {
+    private T[] data;
+
+    public MyList(T[] data) {
+        this.data = data;
+    }
+
+    public T get(int index) {
+        return data[index];
+    }
+
+    public void set(int index, T value) {
+        data[index] = value;
+    }
+}
+________________
+
++Ở ví dụ trên, lớp MyList được định nghĩa với một tham số kiểu dữ liệu T. Tham số này sẽ được thay thế 
+bằng một kiểu dữ liệu cụ thể khi tạo đối tượng MyList. Tương tự, phương thức get và set cũng sử dụng 
+kiểu dữ liệu T để trả về hoặc thiết lập giá trị của phần tử trong danh sách.
+
+Khi sử dụng MyList, bạn có thể chỉ định kiểu dữ liệu cụ thể cho tham số T:
+
+java
+Copy code
+MyList<Integer> myList = new MyList<>(new Integer[] {1, 2, 3});
+Integer first = myList.get(0);
+myList.set(1, 4);
+Ở đây, chúng ta sử dụng MyList với kiểu dữ liệu Integer, cho phép chúng ta làm việc với danh sách các số nguyên.
+
+
+
+
+
