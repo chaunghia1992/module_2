@@ -1,11 +1,12 @@
-package product1.views;
+package com.codegym.product1.views;
 
-import product1.model.PType;
-import product1.model.Product;
-import product1.model.Status;
-import product1.utils.PriceSortASC;
-import product1.utils.PriceSortDESC;
-import product1.services.ProductService;
+import com.codegym.product1.model.Status;
+import com.codegym.product1.services.ProductService;
+import com.codegym.product1.utils.PriceSortDESC;
+import com.codegym.product1.model.PType;
+import com.codegym.product1.model.Product;
+import com.codegym.product1.utils.PriceSortASC;
+
 import java.text.DecimalFormat;
 import java.util.List;
 import java.util.Scanner;
@@ -152,9 +153,9 @@ public class ProductView {
         List<Product> products = productService.getProducts();
         System.out.println("Danh sách sản phẩm : ");
         System.out.println("\t\t\t\t=========================================================================================================================");
-        System.out.printf("\t\t\t\t%-10s %-25s %-30s %-15s %-25s %-25s\n", "ID", "Loại sản phẩm", "Tên sản phẩm", "Số lượng", "Giá", "Trạng thái");
+        System.out.printf("\t\t\t\t%-10s %-25s %-30s %-15s %-25s %-25s\n", "ID", "Tên sản phẩm", "Loại sản phẩm", "Số lượng", "Giá", "Trạng thái");
         for (Product product : products) {
-            System.out.printf("\t\t\t\t%-10d %-25s %-30s %-15d %-25s %-25s\n", product.getId(), product.getType(), product.getName(), product.getQuantity(), format.format(product.getPrice()), product.getStatus());
+            System.out.printf("\t\t\t\t%-10d %-25s %-30s %-15d %-25s %-25s\n", product.getId(), product.getName(), product.getType(), product.getQuantity(), format.format(product.getPrice()), product.getStatus());
         }
         System.out.println("\t\t\t\t=========================================================================================================================\n\n");
         menu.boss();
@@ -166,9 +167,9 @@ public class ProductView {
         List<Product> products = productService.getProducts();
         System.out.println("Danh sách sản phẩm");
         System.out.println("\t\t\t\t=========================================================================================================================");
-        System.out.printf("\t\t\t\t%-10s %-25s %-30s %-15s %-25s %-25s\n", "ID", "Loại sản phẩm", "Tên sản phẩm", "Số lượng", "Giá", "Trạng thái");
+        System.out.printf("\t\t\t\t%-10s %-25s %-30s %-15s %-25s %-25s\n", "ID", "Tên sản phẩm", "Loại sản phẩm", "Số lượng", "Giá", "Trạng thái");
         for (Product product : products) {
-            System.out.printf("\t\t\t\t%-10d %-25s %-30s %-15d %-25s %-25s\n", product.getId(), product.getType(), product.getName(), product.getQuantity(), format.format(product.getPrice()), product.getStatus());
+            System.out.printf("\t\t\t\t%-10d %-25s %-30s %-15d %-25s %-25s\n", product.getId(), product.getName(), product.getType(), product.getQuantity(), format.format(product.getPrice()), product.getStatus());
         }
         System.out.println("\t\t\t\t=========================================================================================================================\n\n");
         menu.guest();
@@ -178,9 +179,9 @@ public class ProductView {
         List<Product> products = productService.getProducts();
         System.out.println("Mô tả sản phẩm");
         System.out.println("\t\t\t\t=========================================================================================================================");
-        System.out.printf("\t\t\t\t%-10s %-25s %-30s %-50s\n", "ID", "Loại sản phẩm", "Tên sản phẩm", "Mô tả");
+        System.out.printf("\t\t\t\t%-10s %-25s %-30s %-50s\n", "ID", "Tên sản phẩm","Loại sản phẩm", "Mô tả");
         for (Product product : products) {
-            System.out.printf("\t\t\t\t%-10s %-25s %-30s %-50s\n", product.getId(), product.getType(), product.getName(), product.getDescription());
+            System.out.printf("\t\t\t\t%-10s %-25s %-30s %-50s\n", product.getId(),product.getName() ,product.getType(), product.getDescription());
         }
         System.out.println("\t\t\t\t=========================================================================================================================\n\n");
         menu.boss();
@@ -190,9 +191,9 @@ public class ProductView {
         List<Product> products = productService.getProducts();
         System.out.println("Mô tả sản phẩm");
         System.out.println("\t\t\t\t=========================================================================================================================");
-        System.out.printf("\t\t\t\t%-10s %-25s %-30s %-50s\n", "ID", "Loại sản phẩm", "Tên sản phẩm", "Mô tả");
+        System.out.printf("\t\t\t\t%-10s %-25s %-30s %-50s\n", "ID", "Tên sản phẩm","Loại sản phẩm", "Mô tả");
         for (Product product : products) {
-            System.out.printf("\t\t\t\t%-10s %-25s %-30s %-50s\n", product.getId(), product.getType(), product.getName(), product.getDescription());
+            System.out.printf("\t\t\t\t%-10s %-25s %-30s %-50s\n", product.getId(), product.getName() ,product.getType(),  product.getDescription());
         }
         System.out.println("\t\t\t\t=========================================================================================================================\n\n");
         menu.guest();
@@ -203,9 +204,9 @@ public class ProductView {
         p.sort(new PriceSortASC());
         System.out.println("Danh sách sản phẩm");
         System.out.println("\t\t\t\t=========================================================================================================================");
-        System.out.printf("\t\t\t\t%-10s %-25s %-30s %-15s %-25s %-25s\n", "ID", "Loại sản phẩm", "Tên sản phẩm", "Số lượng", "Giá", "Trạng thái");
+        System.out.printf("\t\t\t\t%-10s %-25s %-30s %-15s %-25s %-25s\n", "ID", "Tên sản phẩm","Loại sản phẩm",  "Số lượng", "Giá", "Trạng thái");
         for (Product product : p) {
-            System.out.printf("\t\t\t\t%-10d %-25s %-30s %-15d %-25s %-25s\n", product.getId(), product.getType(), product.getName(), product.getQuantity(), format.format(product.getPrice()), product.getStatus());
+            System.out.printf("\t\t\t\t%-10d %-25s %-30s %-15d %-25s %-25s\n", product.getId(),product.getName() ,product.getType(),  product.getQuantity(), format.format(product.getPrice()), product.getStatus());
         }
         System.out.println("\t\t\t\t=========================================================================================================================\n\n");
         menu.guest();
@@ -216,9 +217,9 @@ public class ProductView {
         p.sort(new PriceSortDESC());
         System.out.println("Danh sách sản phẩm");
         System.out.println("\t\t\t\t=========================================================================================================================");
-        System.out.printf("\t\t\t\t%-10s %-25s %-30s %-15s %-25s %-25s\n", "ID", "Loại sản phẩm", "Tên sản phẩm", "số lượng", "giá", "trạng thái");
+        System.out.printf("\t\t\t\t%-10s %-25s %-30s %-15s %-25s %-25s\n", "ID","Tên sản phẩm", "Loại sản phẩm", "số lượng", "giá", "trạng thái");
         for (Product product : p) {
-            System.out.printf("\t\t\t\t%-10d %-25s %-30s %-15d %-25s %-25s\n", product.getId(), product.getType(), product.getName(), product.getQuantity(), format.format(product.getPrice()), product.getStatus());
+            System.out.printf("\t\t\t\t%-10d %-25s %-30s %-15d %-25s %-25s\n", product.getId(), product.getName(), product.getType(), product.getQuantity(), format.format(product.getPrice()), product.getStatus());
         }
         System.out.println("\t\t\t\t=========================================================================================================================\n\n");
         menu.guest();
@@ -261,10 +262,10 @@ public class ProductView {
         List<Product> products = productService.getProducts();
         System.out.println("Danh sách sản phẩm");
         System.out.println("\t\t\t\t=========================================================================================================================");
-        System.out.printf("\t\t\t\t%-10s %-25s %-30s %-15s %-25s %-25s\n", "ID", "Loại sản phẩm", "Tên sản phẩm", "Số lượng", "Giá", "Trạng thái");
+        System.out.printf("\t\t\t\t%-10s %-25s %-30s %-15s %-25s %-25s\n", "ID", "Tên sản phẩm","Loại sản phẩm", "Số lượng", "Giá", "Trạng thái");
         for (Product product : products) {
             if (product.getType().equalsIgnoreCase(type)) {
-                System.out.printf("\t\t\t\t%-10d %-25s %-30s %-15d %-25s %-25s\n", product.getId(), product.getType(), product.getName(), product.getQuantity(), format.format(product.getPrice()), product.getStatus());
+                System.out.printf("\t\t\t\t%-10d %-25s %-30s %-15d %-25s %-25s\n", product.getId(),product.getName(), product.getType(),  product.getQuantity(), format.format(product.getPrice()), product.getStatus());
                 found = true;
             }
         }
@@ -312,10 +313,10 @@ public class ProductView {
         List<Product> products = productService.getProducts();
         System.out.println("Danh sách sản phẩm");
         System.out.println("\t\t\t\t=========================================================================================================================");
-        System.out.printf("\t\t\t\t%-10s %-25s %-30s %-15s %-25s %-25s\n", "ID", "Loại sản phẩm", "Tên sản phẩm", "Số lượng", "Giá", "Trạng thái");
+        System.out.printf("\t\t\t\t%-10s %-25s %-30s %-15s %-25s %-25s\n", "ID","Tên sản phẩm", "Loại sản phẩm", "Số lượng", "Giá", "Trạng thái");
         for (Product product : products) {
             if (product.getType().equalsIgnoreCase(type)) {
-                System.out.printf("\t\t\t\t%-10d %-25s %-30s %-15d %-25s %-25s\n", product.getId(), product.getType(), product.getName(), product.getQuantity(), format.format(product.getPrice()), product.getStatus());
+                System.out.printf("\t\t\t\t%-10d %-25s %-30s %-15d %-25s %-25s\n", product.getId(), product.getName(), product.getType(),  product.getQuantity(), format.format(product.getPrice()), product.getStatus());
                 found = true;
             }
         }
@@ -332,10 +333,10 @@ public class ProductView {
         boolean found = false;
         List<Product> p = productService.getProducts();
         System.out.println("Danh sách sản phẩm");
-        System.out.printf("\t\t\t\t%-10s %-25s %-30s %-15s %-25s %-25s\n", "ID", "Loại sản phẩm", "Tên sản phẩm", "số lượng", "giá", "trạng thái");
+        System.out.printf("\t\t\t\t%-10s %-25s %-30s %-15s %-25s %-25s\n", "ID",  "Tên sản phẩm","Loại sản phẩm", "số lượng", "giá", "trạng thái");
         for (Product product : p) {
             if (product.getName().toUpperCase().contains(name)) {
-                System.out.printf("\t\t\t\t%-10d %-25s %-30s %-15d %-25s %-25s\n", product.getId(), product.getType(), product.getName(), product.getQuantity(), format.format(product.getPrice()), product.getStatus());
+                System.out.printf("\t\t\t\t%-10d %-25s %-30s %-15d %-25s %-25s\n", product.getId(), product.getName(), product.getType(), product.getQuantity(), format.format(product.getPrice()), product.getStatus());
                 found = true;
             }
         }
@@ -352,11 +353,11 @@ public class ProductView {
         boolean found = false;
         List<Product> p = productService.getProducts();
         System.out.println("Danh sách sản phẩm");
-        System.out.printf("\t\t\t\t%-10s %-25s %-30s %-15s %-25s %-25s\n", "ID", "Loại sản phẩm", "Tên sản phẩm", "Số lượng", "Giá", "Trạng thái");
+        System.out.printf("\t\t\t\t%-10s %-25s %-30s %-15s %-25s %-25s\n", "ID","Tên sản phẩm", "Loại sản phẩm", "Số lượng", "Giá", "Trạng thái");
         for (Product product : p) {
             if (product.getName().toUpperCase().contains(name)) {
                 System.out.println("\t\t\t\t=========================================================================================================================\n");
-                System.out.printf("\t\t\t\t%-10d %-25s %-30s %-15d %-25s %-25s\n", product.getId(), product.getType(), product.getName(), product.getQuantity(), format.format(product.getPrice()), product.getStatus());
+                System.out.printf("\t\t\t\t%-10d %-25s %-30s %-15d %-25s %-25s\n", product.getId(), product.getName() ,product.getType(),  product.getQuantity(), format.format(product.getPrice()), product.getStatus());
                 found = true;
             }
         }

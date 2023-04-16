@@ -1,7 +1,7 @@
-package product1.utils;
+package com.codegym.product1.utils;
 
 
-import product1.model.Product;
+import com.codegym.product1.model.Product;
 
 import java.util.Comparator;
 

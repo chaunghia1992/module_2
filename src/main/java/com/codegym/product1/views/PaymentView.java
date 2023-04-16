@@ -1,10 +1,10 @@
-package product1.views;
+package com.codegym.product1.views;
 
-import product1.model.Payment;
-import product1.model.Product;
-import product1.services.PaymentService;
-import product1.services.ProductService;
-import product1.utils.ValidateUtils;
+import com.codegym.product1.model.Payment;
+import com.codegym.product1.services.ProductService;
+import com.codegym.product1.model.Product;
+import com.codegym.product1.services.PaymentService;
+import com.codegym.product1.utils.ValidateUtils;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;

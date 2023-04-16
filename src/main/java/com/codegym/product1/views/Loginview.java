@@ -1,7 +1,7 @@
-package product1.views;
+package com.codegym.product1.views;
 
-import product1.model.Role;
-import product1.utils.CSVUtils;
+import com.codegym.product1.model.Role;
+import com.codegym.product1.utils.CSVUtils;
 
 import java.util.Scanner;
 

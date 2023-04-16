@@ -1,8 +1,7 @@
-package product1.services;
+package com.codegym.product1.services;
 
-
-import product1.model.Payment;
-import product1.utils.CSVUtils;
+import com.codegym.product1.model.Payment;
+import com.codegym.product1.utils.CSVUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,9 +21,9 @@ public class PaymentService extends ProductService implements IPaymentService {
     }
 
     @Override
-    public void  add(List <Payment> list) {
+    public void add(List<Payment> list) {
         getPayment();
-        for (Payment p:list) {
+        for (Payment p : list) {
             paymentList.add(p);
         }
         CSVUtils.write(path, paymentList);
@@ -42,13 +41,12 @@ public class PaymentService extends ProductService implements IPaymentService {
     }
 
 
-
-    public long showTotal (){
+    public long showTotal() {
         getPayment();
         long a = 0;
-        for (Payment p:paymentList) {
+        for (Payment p : paymentList) {
             long x = p.getRevenue();
-            a+=x;
+            a += x;
         }
         return a;
     }

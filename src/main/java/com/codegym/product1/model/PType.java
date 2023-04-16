@@ -1,4 +1,4 @@
-package product1.model;
+package com.codegym.product1.model;
 
 public enum PType {
     sunsilk("sunsilk"), clearMen("clearMen"), Romano("Romano"),dove("dove"), lifebuoy("lifebuoy");

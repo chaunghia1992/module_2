@@ -1,8 +1,8 @@
-package product1.services;
+package com.codegym.product1.services;
 
-import product1.model.Product;
-import product1.model.Status;
-import product1.utils.CSVUtils;
+import com.codegym.product1.model.Product;
+import com.codegym.product1.model.Status;
+import com.codegym.product1.utils.CSVUtils;
 import java.util.ArrayList;
 import java.util.List;
 
