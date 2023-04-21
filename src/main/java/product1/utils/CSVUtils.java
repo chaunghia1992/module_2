@@ -1,4 +1,4 @@
-package com.codegym.product1.utils;
+package product1.utils;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;

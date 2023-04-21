@@ -1,16 +1,16 @@
-package com.codegym.product1.views;
+package product1.views;
 
-import com.codegym.product1.model.Role;
-import com.codegym.product1.utils.CSVUtils;
+import product1.model.Role;
+import product1.utils.CSVUtils;
 
 import java.util.Scanner;
 
 public class Loginview {
     public User login() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter username:");
+        System.out.println("Đăng nhập :");
         String username = scanner.nextLine();
-        System.out.println("Enter password:");
+        System.out.println("Mật Khẩu :");
         String password = scanner.nextLine();
         Role role = authenticate(username, password);
         return new User(username, password, role);

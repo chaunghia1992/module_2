@@ -1,35 +1,35 @@
-package com.codegym.product1.model;
+package product1.model;
 
-public class Product {
+public class Farm {
     private int id;
     private PType type;
     private String name;
     private int quantity;
     private long price;
-    private String description;
+    private String vaccinationhistory;
     private Status status;
 
-    public Product() {
+    public Farm() {
     }
 
-    public Product(int id, PType type, String name, int quantity, long price, String description, Status status) {
+    public Farm(int id, PType type, String name, int quantity, long price, String description, Status status) {
         this.id = id;
         this.type = type;
         this.name = name;
         this.quantity = quantity;
         this.price = price;
-        this.description = description;
+        this.vaccinationhistory = description;
         this.status = status;
     }
 
-    public Product(String raw) {
+    public Farm(String raw) {
         String [] strings = raw.split(";");
         this.id = Integer.parseInt(strings[0]);
         this.type = PType.contains(strings[1]);
         this.name = strings[2];
         this.quantity = Integer.parseInt(strings[3]);
         this.price = Long.parseLong((strings[4]));
-        this.description = strings[5];
+        this.vaccinationhistory = strings[5];
         this.status = Status.contains(strings[6]);
     }
 
@@ -75,11 +75,11 @@ public class Product {
     }
 
     public String getDescription() {
-        return description;
+        return vaccinationhistory;
     }
 
     public void setDescription(String description) {
-        this.description = description;
+        this.vaccinationhistory = description;
     }
 
     public Status getStatus() {
@@ -92,6 +92,6 @@ public class Product {
 
     @Override
     public String toString() {
-        return id + ";" + type + ";" + name + ";" + quantity + ";" + price + ";" + description + ";" + status;
+        return id + ";" + type + ";" + name + ";" + quantity + ";" + price + ";" + vaccinationhistory + ";" + status;
     }
 }

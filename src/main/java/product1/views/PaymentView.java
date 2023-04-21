@@ -1,15 +1,17 @@
-package com.codegym.product1.views;
+package product1.views;
 
-import com.codegym.product1.model.Payment;
-import com.codegym.product1.services.ProductService;
-import com.codegym.product1.model.Product;
-import com.codegym.product1.services.PaymentService;
-import com.codegym.product1.utils.ValidateUtils;
+import product1.model.Farm;
+import product1.model.Payment;
+import product1.services.PaymentService;
+import product1.services.ProductService;
+import product1.utils.ValidateUtils;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+
+import static product1.views.Menu.chon;
 
 public class PaymentView {
     DecimalFormat format = new DecimalFormat("###,###,###" + " đ");
@@ -32,7 +34,7 @@ public class PaymentView {
     int currentQuantity;
 
 
-    Product product = null;
+    Farm farm = null;
 
 
     public PaymentView() {
@@ -44,13 +46,13 @@ public class PaymentView {
     public void buy() {
         while (true) {
 
-            System.out.println("Nhập ID sản phẩm cần mua");
+            System.out.println("Nhập ID động vật cần mua");
             System.out.print("\t➺ ");
             try {
                 id1 = Integer.parseInt(scanner.nextLine());
                 if (id1 > 0) {
                     if (paymentService.existProduct(id1)) {
-                        product = paymentService.findProductbyID(id1);
+                        farm = paymentService.findProductbyID(id1);
                         break;
                     } else {
                         System.out.println("ID này không tồn tại");
@@ -65,9 +67,9 @@ public class PaymentView {
             }
         }
         while (true) {
-            System.out.println("Nhập số lượng sản phẩm: ");
+            System.out.println("Nhập số lượng động vật: ");
             System.out.print("\t➺ ");
-            realQuantity = product.getQuantity();
+            realQuantity = farm.getQuantity();
             try {
                 quantity = Integer.parseInt(scanner.nextLine());
                 if (quantity >= 0) {
@@ -76,7 +78,7 @@ public class PaymentView {
                         quantityPurchased = quantity;
                         break;
                     } else {
-                        System.out.println(" ★ Vượt quá số lượng hàng có sẵn  ★");
+                        System.out.println(" ★ Vượt quá số lượng có sẵn  ★");
                         System.out.println();
                     }
                 } else {
@@ -88,7 +90,7 @@ public class PaymentView {
                 System.out.println();
             }
         }
-        long price = product.getPrice();
+        long price = farm.getPrice();
         revenue = price * quantityPurchased;
         Payment p = new Payment(id1, quantityPurchased, revenue);
         if(list.size()==0){
@@ -110,7 +112,7 @@ public class PaymentView {
                 }
             }
             if(isError){
-                System.out.println(" ★ Vượt quá số lượng hàng có sẵn  ★");
+                System.out.println(" ★ Vượt quá số lượng có sẵn  ★");
                 System.out.println();
                 buy();
             } else if (!isUpdate){
@@ -122,13 +124,13 @@ public class PaymentView {
     }
 
     public void showTotal() {
-        System.out.println("Danh sách sản phẩm mua");
+        System.out.println("Danh sách động vật mua");
         System.out.println("______________________");
         long sum = 0;
         for (int i = 0; i < list.size(); i++) {
             long total;
             total = list.get(i).getQuantity() * productService.findProductbyID(list.get(i).getId()).getPrice();
-            System.out.printf("Tổng tiền sản phẩm %s là : %s\n", productService.findProductbyID(list.get(i).getId()).getName(), format.format(total));
+            System.out.printf("Tổng tiền  %s là : %s\n", productService.findProductbyID(list.get(i).getId()).getName(), format.format(total));
             sum += total;
 
         }
@@ -144,12 +146,12 @@ public class PaymentView {
         System.out.println("Tên khách hàng: "+ list.get(0).getName());
         System.out.println("Số điện thoại: "+ list.get(0).getPhoneNumber());
         System.out.println("Địa chỉ: "+ list.get(0).getAddress());
-        System.out.println("Danh sách sản phẩm mua");
+        System.out.println("Danh sách động vật mua");
         long sum = 0;
         for (int i = 0; i < list.size(); i++) {
             long total;
             total = list.get(i).getQuantity() * productService.findProductbyID(list.get(i).getId()).getPrice();
-            System.out.printf("Tổng tiền sản phẩm %s là : %s\n", productService.findProductbyID(list.get(i).getId()).getName(), format.format(total));
+            System.out.printf("Tổng tiền  %s là : %s\n", productService.findProductbyID(list.get(i).getId()).getName(), format.format(total));
             sum += total;
 
         }
@@ -161,13 +163,13 @@ public class PaymentView {
 
     public void showAllIncome (){
         System.out.println("===================================");
-        System.out.println("＄ Tổng doanh thu: "+ format.format(paymentService.showTotal()));
+        System.out.println("＄ Tổng doanh thu : "+ format.format(paymentService.showTotal()));
         System.out.println("===================================\n\n");
         menu.boss();
     }
 
     public void option() {
-        System.out.println("\t\t\t\tNhập 1 để mua thêm sản phẩm");
+        System.out.println("\t\t\t\tNhập 1 để mua thêm động vật");
         System.out.println("\t\t\t\tNhập 2 để xem tổng tiền");
         System.out.print("\t➺ ");
         int options;
@@ -193,9 +195,10 @@ public class PaymentView {
     }
 
     public void check() {
-        System.out.println("Bạn có muốn thanh toán đơn hàng này không?");
+        System.out.println("Bạn có muốn thanh toán đơn này không?");
         System.out.println("nhập 1 để thanh toán");
         System.out.println("nhập 2 để mua lại");
+        System.out.println("nhập 3 để thoát");
         System.out.print("\t➺ ");
         int options;
         try {
@@ -207,6 +210,9 @@ public class PaymentView {
                 case 2:
                     list.clear();
                     buy();
+                    break;
+                case 3:
+                    chon();
                     break;
                 default:
                     System.out.println("Nhập không đúng! Vui lòng nhập lại");
@@ -285,7 +291,7 @@ public class PaymentView {
                     menu.guest();
                     break;
                 case 3:
-                    System.out.println("∼∼∼∼∼∼∼∼∼∼ Hẹn Gặp Lại Quý Khách∽∽∽∽∽∽∽∽∽∽\n\n");
+                    System.out.println("∼∼∼∼∼∼∼∼∼∼ Hẹn Gặp Lại Quý Khách ∽∽∽∽∽∽∽∽∽∽\n\n");
                     menu.exit();
                     break;
                 default:

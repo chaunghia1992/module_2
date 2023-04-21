@@ -1,12 +1,12 @@
-package com.codegym.product1.model;
+package product1.model;
 
 public class OrderItem {
     private long id;
     private double price;
     private int quantity;
     private long orderId;
-    private int productId;
-    private String productName;
+    private int cageId;
+    private String farm;
     private double total;
 
     public OrderItem() {
@@ -17,8 +17,8 @@ public class OrderItem {
         this.price = price;
         this.quantity = quantity;
         this.orderId = orderId;
-        this.productId = productId;
-        this.productName = productName;
+        this.cageId = productId;
+        this.farm = productName;
         this.total = total;
     }
 
@@ -28,8 +28,8 @@ public class OrderItem {
         this.price = Double.parseDouble(fields[1]);
         this.quantity = Integer.parseInt(fields[2]);
         this.orderId = Long.parseLong(fields[3]);
-        this.productId = Integer.parseInt(fields[4]);
-        this.productName = fields[5];
+        this.cageId = Integer.parseInt(fields[4]);
+        this.farm = fields[5];
         this.total = Double.parseDouble(fields[6]);
     }
 
@@ -66,19 +66,19 @@ public class OrderItem {
     }
 
     public int getProductId() {
-        return productId;
+        return cageId;
     }
 
     public void setProductId(int productId) {
-        this.productId = productId;
+        this.cageId = productId;
     }
 
     public String getProductName() {
-        return productName;
+        return farm;
     }
 
     public void setProductName(String productName) {
-        this.productName = productName;
+        this.farm = productName;
     }
 
     public double getTotal() {
@@ -91,6 +91,6 @@ public class OrderItem {
 
     @Override
     public String toString() {
-        return id + "," + price + "," + quantity + "," + orderId + "," + productId + "," + productName + "," + total;
+        return id + "," + price + "," + quantity + "," + orderId + "," + cageId + "," + farm + "," + total;
     }
 }

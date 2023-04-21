@@ -1,7 +1,7 @@
-package com.codegym.product1.model;
+package product1.model;
 
 public enum PType {
-    sunsilk("sunsilk"), clearMen("clearMen"), Romano("Romano"),dove("dove"), lifebuoy("lifebuoy");
+    bò("bò"), gà("gà"), ngựa("ngựa"),vịt("vịt"), trâu("trâu"), heo("heo"),dê("dê") ;
     private String value;
 
     PType(String value) {

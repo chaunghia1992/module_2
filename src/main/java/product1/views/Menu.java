@@ -1,11 +1,11 @@
-package com.codegym.product1.views;
+package product1.views;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 
 public class Menu {
-    static ProductView productView = new ProductView();
+    static FarmView farmView = new FarmView();
     static PaymentView paymentView = new PaymentView();
     static Scanner scanner = new Scanner(System.in);
 
@@ -29,22 +29,22 @@ public class Menu {
                 int number = scanner.nextInt();
                 switch (number) {
                     case 1:
-                        productView.showProductBoss();
+                        farmView.showProductBoss();
                         break;
                     case 2:
-                        productView.showProductDescriptionBoss();
+                        farmView.showProductDescriptionBoss();
                         break;
                     case 3:
-                        productView.add();
+                        farmView.add();
                         break;
                     case 4:
-                        productView.updateProduct();
+                        farmView.updateProduct();
                         break;
                     case 5:
-                        productView.findProductbyNameBoss();
+                        farmView.findProductbyNameBoss();
                         break;
                     case 6:
-                        productView.findProductbyTypeBoss();
+                        farmView.findProductbyTypeBoss();
                         break;
                     case 7:
                         paymentView.showAllIncome();
@@ -103,30 +103,24 @@ public class Menu {
             int number = scanner.nextInt();
             switch (number) {
                 case 1:
-                    productView.showProductGuest();
+                    farmView.showProductGuest();
                     break;
                 case 2:
-                    productView.showProductDescriptionGuest();
+                    farmView.showProductDescriptionGuest();
                     break;
                 case 3:
-                    productView.findProductbyNameGuest();
+                    farmView.findProductbyNameGuest();
                     break;
                 case 4:
-                    productView.findProductbyTypeGuest();
+                    farmView.findProductbyTypeGuest();
                     break;
                 case 5:
-                    productView.sortASC();
-                    break;
-                case 6:
-                    productView.sortDESC();
-                    break;
-                case 7:
                     paymentView.buy();
                     break;
-                case 8:
+                case 6:
                     chon();
                     break;
-                case 9:
+                case 7:
                     exit();
                     break;
                 default:
@@ -173,10 +167,10 @@ public class Menu {
 
     public static void menuMain() {
         System.out.println();
-        System.out.println("❄❄❄❄❄❄-- Giao diện-- ❄❄❄❄❄❄");
+        System.out.println("❄❄❄❄❄❄-- Trang Trại -- ❄❄❄❄❄❄");
         System.out.println("❄❄  ✌  option :               ❄❄ ");
-        System.out.println("❄❄      1.    quản lý         ❄❄ ");
-        System.out.println("❄❄      2.    Khách hàng      ❄❄ ");
+        System.out.println("❄❄      1.    Chủ Trang Trại  ❄❄ ");
+        System.out.println("❄❄      2.    Người Mua       ❄❄ ");
         System.out.println("❄❄      3.    Thoát           ❄❄ ");
         System.out.println("❄❄                            ❄❄ ");
         System.out.println("❄❄ ❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄");
@@ -190,34 +184,32 @@ public class Menu {
     }
 
     public static void menuBoss() {
-        System.out.println("♕♕♕♕♕♕♕♕♕♕ Giao diện chủ ♕♕♕♕♕♕♕♕♕♕");
-        System.out.println("✿✿✿                                     ✿✿✿");
-        System.out.println("✿✿✿   1. Hiển thị danh sách sản phẩm    ✿✿✿");
-        System.out.println("✿✿✿   2. Hiển thị mô tả sản phẩm        ✿✿✿");
-        System.out.println("✿✿✿   3. Thêm sản phẩm vào danh sách    ✿✿✿");
-        System.out.println("✿✿✿   4. Sửa thông tin sản phẩm         ✿✿✿");
-        System.out.println("✿✿✿   5. Tìm kiếm sản phẩm theo tên     ✿✿✿");
-        System.out.println("✿✿✿   6. Tìm kiếm sản phẩm theo loại    ✿✿✿");
-        System.out.println("✿✿✿   7. Xem tổng doanh thu             ✿✿✿");
-        System.out.println("✿✿✿   8. Quay lại                       ✿✿✿");
-        System.out.println("✿✿✿   9. Thoát                          ✿✿✿");
-        System.out.println("✿✿✿                                     ✿✿✿");
-        System.out.println("♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕");
+        System.out.println("♕♕♕♕♕♕♕♕♕♕ Chủ Trang Trại ♕♕♕♕♕♕♕♕♕♕♕♕♕");
+        System.out.println("✿✿✿                                           ✿✿✿");
+        System.out.println("✿✿✿   1. Hiển thị danh sách động Vật          ✿✿✿");
+        System.out.println("✿✿✿   2. Hiển thị lịch sử tiêm vacxin         ✿✿✿");
+        System.out.println("✿✿✿   3. Nhập số lượng động vật vào chuồng    ✿✿✿");
+        System.out.println("✿✿✿   4. Sửa thông tin động vật               ✿✿✿");
+        System.out.println("✿✿✿   5. Tìm kiếm động vật theo tên           ✿✿✿");
+        System.out.println("✿✿✿   6. Tìm kiếm động vật theo loại          ✿✿✿");
+        System.out.println("✿✿✿   7. Xem tổng doanh thu xuất chuồng       ✿✿✿");
+        System.out.println("✿✿✿   8. Quay lại                             ✿✿✿");
+        System.out.println("✿✿✿   9. Thoát                                ✿✿✿");
+        System.out.println("✿✿✿                                           ✿✿✿");
+        System.out.println("♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕");
     }
 
     public static void menuGuest() {
-        System.out.println("♕♕♕♕♕♕♕♕  Giao diện Khách  ♕♕♕♕♕♕♕♕✿✿✿ ");
-        System.out.println("✿✿✿                                         ✿✿✿");
-        System.out.println("✿✿✿   1. Hiển thị danh sách sản phẩm        ✿✿✿");
-        System.out.println("✿✿✿   2. Hiển thị mô tả sản phẩm            ✿✿✿");
-        System.out.println("✿✿✿   3. Tìm kiếm sản phẩm theo tên         ✿✿✿");
-        System.out.println("✿✿✿   4. Tìm kiếm sản phẩm theo loại        ✿✿✿");
-        System.out.println("✿✿✿   5. Sắp xếp sản phẩm theo giá tăng dần ✿✿✿");
-        System.out.println("✿✿✿   6. Sắp xếp sản phẩm theo giá giảm dần ✿✿✿");
-        System.out.println("✿✿✿   7. Mua sản phẩm                       ✿✿✿");
-        System.out.println("✿✿✿   8. Quay lại                           ✿✿✿");
-        System.out.println("✿✿✿   9. Thoát                              ✿✿✿");
-        System.out.println("✿✿✿                                         ✿✿✿");
-        System.out.println("♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕ ");
+        System.out.println("♕♕♕♕♕♕♕♕  Người Mua ♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕");
+        System.out.println("✿✿✿                                              ✿✿✿");
+        System.out.println("✿✿✿   1. Hiển thị danh sách động Vật             ✿✿✿");
+        System.out.println("✿✿✿   2. Hiển thị lịch sử tiêm vacxin            ✿✿✿");
+        System.out.println("✿✿✿   3. Tìm kiếm  động vật theo tên             ✿✿✿");
+        System.out.println("✿✿✿   4. Tìm kiếm động vật theo loại             ✿✿✿");
+        System.out.println("✿✿✿   5. Mua                                     ✿✿✿");
+        System.out.println("✿✿✿   6. Quay lại                                ✿✿✿");
+        System.out.println("✿✿✿   7. Thoát                                   ✿✿✿");
+        System.out.println("✿✿✿                                              ✿✿✿");
+        System.out.println("♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕♕ ");
     }
 }

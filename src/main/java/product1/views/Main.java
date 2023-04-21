@@ -1,4 +1,4 @@
-package com.codegym.product1.views;
+package product1.views;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,7 +1,7 @@
-package com.codegym.product1.services;
+package product1.services;
 
-import com.codegym.product1.model.Payment;
-import com.codegym.product1.utils.CSVUtils;
+import product1.model.Payment;
+import product1.utils.CSVUtils;
 
 import java.util.ArrayList;
 import java.util.List;

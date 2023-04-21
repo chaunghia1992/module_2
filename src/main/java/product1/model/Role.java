@@ -1,4 +1,4 @@
-package com.codegym.product1.model;
+package product1.model;
 
 public enum Role {
     ADMIN("ADMIN"), USER("USER");
